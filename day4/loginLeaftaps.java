@@ -10,6 +10,7 @@ public class loginLeaftaps {
 		driver.findElement(By.id("username")).sendKeys("demosalesmanager");
 		driver.findElement(By.id("password")).sendKeys("crmsfa");
 		driver.findElement(By.className("decorativeSubmit")).click();
+		driver.findElement(By.linkText("CRM/SFA")).click();
 		Thread.sleep(10000);
 		driver.close();
 	}
