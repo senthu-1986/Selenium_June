@@ -14,7 +14,11 @@ public class Leafgroundbutton {
 		driver.manage().window().maximize();
 		driver.findElement(By.name("j_idt88:j_idt90")).click();
 		String title = driver.getTitle();
-		System.out.println("The Title of the page is " +title);
+		if (title.equals("Dashboard")) {
+			System.out.println("Title Verified: " + title);
+		} else {
+			System.out.println("Title Mismatch: " + title);
+		}
 		
 		driver .get("https://leafground.com/button.xhtml");
 		WebElement buttonDisabled = driver.findElement(By.name("j_idt88:j_idt92"));
